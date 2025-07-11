@@ -3,6 +3,8 @@ import radios from '/imagenes/radios.jpg';
 import fondo2 from '/imagenes/fondo2.webp';
 import mediosPago from '/imagenes/medios-de-pago.jpg';
 
+
+
 function MainBootstrap() {
   return (
     <Container className="my-5">
@@ -10,7 +12,8 @@ function MainBootstrap() {
       {/* Título principal */}
       <Row className="mb-5">
         <Col className="text-center">
-          <h2 className="display-5 fw-bold">LO NUESTRO es COMUNICARNOS</h2>
+          <h2 className="display-5 fw-bold">RADIOSHARKY</h2>
+          <h3 className="display-5">Lo nuestro es comunicarnos.</h3>
         </Col>
       </Row>
 

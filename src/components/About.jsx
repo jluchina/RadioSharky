@@ -1,7 +1,14 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
+import { Helmet } from 'react-helmet';
 
 function About() {
   return (
+      <>
+      <Helmet>
+        <title>Sobre Nosotros | RadioShark</title>
+        <meta name="description" content="Conocé más sobre nuestra trayectoria en comunicaciones, radioafición y soluciones a medida." />
+      </Helmet>
+
     <Container className="my-5">
       <Row className="justify-content-center">
         <Col xs={12} md={10} lg={8}>
@@ -27,6 +34,7 @@ function About() {
         </Col>
       </Row>
     </Container>
+    </>
   );
 }
 
