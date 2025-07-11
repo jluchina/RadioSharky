@@ -1,4 +1,7 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
+import radios from '/imagenes/radios.jpg';
+import fondo2 from '/imagenes/fondo2.webp';
+import mediosPago from '/imagenes/medios-de-pago.jpg';
 
 function MainBootstrap() {
   return (
@@ -15,7 +18,7 @@ function MainBootstrap() {
       <Row className="mb-5 justify-content-center">
         <Col xs={12} md={8} lg={6}>
           <Image
-            src="../src/assets/radios.jpg"
+            src={radios}
             alt="Radios"
             fluid
             rounded
@@ -36,7 +39,7 @@ function MainBootstrap() {
         </Col>
         <Col xs={12} md={7} className="text-center">
           <Image
-            src="../src/assets/fondo2.webp"
+            src={fondo2}
             alt="Torre de comunicación"
             fluid
             style={{ maxWidth: "80%" }}
@@ -59,7 +62,7 @@ function MainBootstrap() {
       <Row className="mb-5 justify-content-center">
         <Col xs={12} md={8} lg={6} className="text-center">
           <Image
-            src="../src/assets/medios-de-pago.jpg"
+            src={mediosPago}
             alt="Medios de Pago"
             fluid
             rounded
