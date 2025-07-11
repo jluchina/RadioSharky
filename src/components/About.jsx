@@ -4,10 +4,10 @@ import { Helmet } from 'react-helmet';
 function About() {
   return (
       <>
-      <Helmet>
-        <title>Sobre Nosotros | RadioShark</title>
-        <meta name="description" content="Conocé más sobre nuestra trayectoria en comunicaciones, radioafición y soluciones a medida." />
-      </Helmet>
+<Helmet>
+  <title>Sobre Nosotros | RadioShark</title>
+  <meta name="description" content="35 años ofreciendo soluciones de comunicación a radioaficionados y empresas." />
+</Helmet>
 
     <Container className="my-5">
       <Row className="justify-content-center">

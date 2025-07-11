@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 function CardProducto({producto}){
-    console.log(producto)
+    // console.log(producto)
 
     return(
         <Card>

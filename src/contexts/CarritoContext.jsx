@@ -6,7 +6,7 @@ export function CarritoProvider({ children }) {
     const [productosCarrito, setProductosCarrito] = useState([]);
 
     const agregarAlCarrito = (producto) => {
-        console.log("test")
+        // console.log("test")
         const existe = productosCarrito.find(p => p.id === producto.id);
         if (existe) {
             const carritoActualizado = productosCarrito.map((p) => {
@@ -30,7 +30,7 @@ export function CarritoProvider({ children }) {
     };
 
     function borrarProductoCarrito(id){
-        console.log(id)
+        // console.log(id)
         const nuevoCarrito = productosCarrito.filter((p) => p.id !== id);
         setProductosCarrito(nuevoCarrito);
     }

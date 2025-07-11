@@ -17,14 +17,14 @@ function obtenerProductos() {
     fetch('https://68100d8e27f2fdac24101f50.mockapi.io/productos')
       .then((respuesta) => respuesta.json())
       .then((datos) => {
-        console.log("CONTEXT", datos);
+        // console.log("CONTEXT", datos);
         setProductos(datos);
         setProductosOriginales(datos);
         setProductosCargados(true); // ✅ marca que ya los cargó
         res(datos);
       })
       .catch((error) => {
-        console.log("Error", error);
+        // console.log("Error", error);
         rej(error);
       });
   });
@@ -46,7 +46,7 @@ function obtenerProductos() {
                             throw new Error('Error al agregar el producto.');
                     }
                     const data = await respuesta.json();
-                            console.log('Producto agregado:', data);
+                            // console.log('Producto agregado:', data);
                             res(data)
                             //alert('Producto agregado correctamente');
                     } catch (error) {
@@ -73,7 +73,7 @@ function obtenerProductos() {
                     }
                 })
                 .catch((err) => {
-                    console.log("Error:", err);
+                    // console.log("Error:", err);
                     rej("Hubo un error al obtener el producto.");
                 }); 
             })

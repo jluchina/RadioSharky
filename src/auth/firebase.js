@@ -26,14 +26,14 @@ export function crearUsuario(email, password){
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed up 
-                console.log("Credenciales", userCredential)
+                // console.log("Credenciales", userCredential)
                 const user = userCredential.user;
-                console.log(user)
+                // console.log(user)
                 res(user)
                 // ...
             })
             .catch((error) => {
-                console.log(error.code, error.message)
+                // console.log(error.code, error.message)
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 rej(error)
@@ -47,7 +47,7 @@ auth.useDeviceLanguage()
 export function logearG(){
     signInWithPopup(auth, provider)
     .then((result) => {
-        console.log("test", result)
+        // console.log("test", result)
         // This gives you a Google Access Token. You can use it to access the Google API.
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
@@ -56,7 +56,7 @@ export function logearG(){
         // IdP data available using getAdditionalUserInfo(result)
         // ...
     }).catch((error) => {
-        console.log("test error", error )
+        // console.log("test error", error )
         // Handle Errors here.
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -74,13 +74,13 @@ export function loginEmailPass(email, password){
             signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in 
-                console.log("Credenciales:", userCredential)
+                // console.log("Credenciales:", userCredential)
                 const user = userCredential.user;
-                console.log("User:",user)
+                // console.log("User:",user)
                 res(user)
             })
             .catch((error) => {
-                console.log(error.code)
+                // console.log(error.code)
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 rej(error)
@@ -106,7 +106,7 @@ export function crearProducto(name, imagen, price, description) {
             description: description
         });
 
-        console.log("Document written with ID: ", docRef.id);
+        // console.log("Document written with ID: ", docRef.id);
         res(docRef)
 
         } catch (e) {
@@ -141,15 +141,3 @@ export function obtenerProductos() {
         })
     )
 }
-
-/*crearProducto("test", "url", 23, "klasjdklsajdsaldkklasdljka").then(() => {
-    console.log("si")
-}).catch((error) => {
-    console.log(error)
-})*/
-
-/*obtenerProductos().then((prod) => {
-    console.log(prod)
-}).catch((error) => {
-    console.log(error)
-})*/

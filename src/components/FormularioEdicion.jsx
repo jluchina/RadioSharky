@@ -45,7 +45,7 @@ function FormularioEdicion({ }) {
     if (!producto.price || producto.price <= 0) {
       return("El precio debe ser mayor a 0.")
     }
-    console.log(producto.description.trim())
+    // console.log(producto.description.trim())
     if (!producto.description.trim() || producto.description.length < 10) {
       return("La descripción debe tener al menos 10 caracteres.")
     }

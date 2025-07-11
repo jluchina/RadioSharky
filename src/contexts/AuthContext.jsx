@@ -13,9 +13,9 @@ export function AuthProvider({ children }) {
     }
     localStorage.setItem('authToken', token);
     setUser(username);
-    Console.log(userToken)
-    Console.log(user)
-    Console.log(admin)
+    // Console.log(userToken)
+    // Console.log(user)
+    // Console.log(admin)
   };
 
   const logout = () => {

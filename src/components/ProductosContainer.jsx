@@ -11,15 +11,15 @@ import { FaSearch } from "react-icons/fa";
 
 function ProductosContainer({}){
     const {productos, obtenerProductos, filtrarProductos} = useProductosContext();
-/////////////////////////////////
+//Paginacion//
     const productosPorPagina = 8;
     const [paginaActual, setPaginaActual] = useState(1);
     // Calcular el índice de los productos a mostrar en la página actual
     const indiceUltimoProducto = paginaActual * productosPorPagina;
     const indicePrimerProducto = indiceUltimoProducto - productosPorPagina;
     const productosActuales = productos.slice(indicePrimerProducto, indiceUltimoProducto);
-//////////////////////////////
-//Paginacion////////////////////////
+
+//Paginacion//
 
     const [cargando, setCargando] = useState(true);
     const [error, setError] = useState(null);
@@ -50,7 +50,7 @@ function ProductosContainer({}){
         return(
             <div>
                 <Helmet>
-                    <title>Productos | RadioSharky</title>
+                    <title>RadioSharky | Productos</title>
                     <meta name="description" content="Explora nuestra variedad de productos." />
                 </Helmet>
                 <div className="input-group mb-3 mt-3">

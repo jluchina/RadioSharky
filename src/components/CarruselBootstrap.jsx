@@ -8,7 +8,7 @@ function CarruselBootstrap() {
   const [productosCargados, setProductosCargados] = useState(false);
   
 
-console.log(productos)
+// console.log(productos)
 
 useEffect(() => {
   if (productos.length === 0) {
@@ -24,12 +24,12 @@ useEffect(() => {
 }, [productos]);
 
 
-console.log(productos)
+// console.log(productos)
   const primerosTres = productos.slice(0, 3);
 
   if (cargando) return <p className="text-center my-5">Cargando carrusel...</p>;
   if (primerosTres.length === 0) return <p className="text-center my-5">No hay productos para mostrar.</p>;
-console.log(primerosTres)
+// console.log(primerosTres)
   return (
     <Container className="my-5">
       <Carousel fade>

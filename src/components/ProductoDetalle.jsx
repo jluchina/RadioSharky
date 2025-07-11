@@ -50,6 +50,7 @@ function ProductoDetalle() {
 
   return (
     <Container className="my-5">
+
       <Card className="shadow">
         <Row className="g-0">
           <Col md={5} className="text-center p-4">
@@ -98,6 +99,13 @@ function ProductoDetalle() {
           </Col>
         </Row>
       </Card>
+      <div className="d-flex justify-content-end mt-3">
+        <Link to="/productos">
+          <Button variant="secondary">
+            ← Volver a Productos
+          </Button>
+        </Link>
+      </div>
     </Container>
   );
 }
