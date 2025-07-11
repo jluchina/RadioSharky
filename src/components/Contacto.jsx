@@ -38,10 +38,13 @@ function Contacto() {
         <Row>
           <Col>
             <h5 className="mb-3">Nuestra ubicación</h5>
-            <div className="ratio ratio-16x9">
+            <div style={{ width: "100%", height: "150px" }}>
               <iframe
                 title="mapa"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2760.522239929461!2d-58.448441163332525!3d-34.63366813488858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca33798ad247%3A0x3de37b3b634b3e0d!2sAch%C3%A1val%20900%2C%20C1406CWN%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1730863592283!5m2!1ses-419!2sar"
+                width="100%"
+                height="150"
+                style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
