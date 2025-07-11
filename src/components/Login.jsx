@@ -95,33 +95,49 @@ function Login() {
         </form>
       </div>
     )
-  } if (!user && !show) {
-    return (
-      <div>
-        <form onSubmit={registrarUsuario}>
-          <h2>Registrarse</h2>
-          <div>
-            <label>Email:</label>
-            <input
-              type="text"
-              value={usuario}
-              onChange={(e) => setUsuario(e.target.value)}
-            />
-          </div>
-          <div>
-            <label>Contraseña:</label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <button type="submit">Registrase</button>
-        </form>
-        <button style={{ marginTop: "2px" }} onClick={handleShow}>Iniciar Sesión</button>
-      </div>
-    )
-  }
- 
+ } if (!user && !show) {
+  return (
+    <div className="d-flex flex-column justify-content-center align-items-center min-vh-100">
+      <form onSubmit={registrarUsuario} className="p-4 border rounded shadow" style={{ maxWidth: "400px", width: "100%" }}>
+        <h2 className="text-center mb-4">Registrarse</h2>
+
+        <div className="mb-3">
+          <label className="form-label">Email</label>
+          <input
+            type="email"
+            className="form-control"
+            value={usuario}
+            onChange={(e) => setUsuario(e.target.value)}
+            required
+          />
+        </div>
+
+        <div className="mb-3">
+          <label className="form-label">Contraseña</label>
+          <input
+            type="password"
+            className="form-control"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+
+        <button type="submit" className="btn btn-success w-100">
+          Registrarse
+        </button>
+
+        <button
+          type="button"
+          className="btn btn-outline-secondary w-100 mt-2"
+          onClick={handleShow}
+        >
+          Ya tengo cuenta
+        </button>
+      </form>
+    </div>
+  );
+
+}
 }
 export default Login;
