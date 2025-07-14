@@ -2,14 +2,14 @@ import { initializeApp } from "firebase/app";
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBCppBqwpGJdT5oOitC4B6SD5HRy3djZr8",
-  authDomain: "prueba-auth-bf9d1.firebaseapp.com",
-  projectId: "prueba-auth-bf9d1",
-  storageBucket: "prueba-auth-bf9d1.firebasestorage.app",
-  messagingSenderId: "163101964671",
-  appId: "1:163101964671:web:f73f7b7df587fab22c024a",
-  measurementId: "G-9TZYT7DV4G"
-};
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID
+  };
+  
 
 const app = initializeApp(firebaseConfig);
 
